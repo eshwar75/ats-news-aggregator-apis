@@ -8,6 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/v1', require('./routes/auth'))
+app.use('/v1', require('./routes/preferences'))
 
 try {
     const DATABASE_PORT = process.env.DATABASE_PORT || '127.0.0.1'
